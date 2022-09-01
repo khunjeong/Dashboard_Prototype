@@ -1,0 +1,101 @@
+.modal-container {
+  .modal-back {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+  .modal-content {
+      // background-color: #fff;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  /*
+   * 모달 애니메이션
+   * up-down
+   * down-up
+   * left-right
+   * right-left
+  */
+  .modal-up-down-enter-active {
+      transition: .2s ease-in-out;
+  }
+  .modal-up-down-enter-active-to {
+      transform: translate(-50%, 50%) !important;
+  }
+  .modal-up-down-leave-active {
+      transition: .2s ease-in-out !important;
+      transform: translate(-50%, 50%) !important;
+  }
+
+  .modal-down-up-enter-active {
+      transition: .2s ease-in-out;
+  }
+  .modal-down-up-enter-active-to {
+      transform: translate(-50%, -100%) !important;
+  }
+  .modal-down-up-leave-active {
+      transition: .2s ease-in-out !important;
+      transform: translate(-50%, -100%) !important;
+  }
+
+  .modal-left-right-enter-active {
+      transition: .2s ease-in-out;
+  }
+  .modal-left-right-enter-active-to {
+      transform: translate(50%, -50%) !important;
+  }
+  .modal-left-right-leave-active {
+      transition: .2s ease-in-out !important;
+      transform: translate(50%, -50%) !important;
+  }
+
+  .modal-right-left-enter-active {
+      transition: .2s ease-in-out;
+  }
+  .modal-right-left-enter-active-to {
+      transform: translate(-100%, -50%) !important;
+  }
+  .modal-right-left-leave-active {
+      transition: .2s ease-in-out !important;
+      transform: translate(-100%, -50%) !important;
+  }
+}
+
+.modal-container:nth-of-type(1) {
+  .modal-back {
+      z-index: 1000 !important;
+  }
+  .modal-content {
+      z-index: 1001 !important;
+  }
+}
+.modal-container:nth-of-type(2) {
+  .modal-back {
+      z-index: 1002 !important;
+  }
+  .modal-content {
+      z-index: 1003 !important;
+  }
+}
+.modal-container:nth-of-type(3) {
+  .modal-back {
+      z-index: 1004 !important;
+  }
+  .modal-content {
+      z-index: 1005 !important;
+  }
+}
+.modal-container:nth-of-type(4) {
+  .modal-back {
+      z-index: 1006 !important;
+  }
+  .modal-content {
+      z-index: 1007 !important;
+  }
+}

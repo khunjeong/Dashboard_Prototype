@@ -1,0 +1,29 @@
+$cardTitlePadding: 20px 20px 10px 20px;
+$cardBodyPadding: 10px 20px 20px 20px;
+
+$colors: (
+	primary: #13e6af,
+	info: #2baadf,
+	danger: #907cb9,
+	warn: #ebc20e,
+	etc: #ff7043,
+
+	baseBorder: #dddddd,
+	background: #f4f5f9,
+
+	cardAvatarIcon: #ffffff,
+	cardBackground: #ffffff,
+
+	baseFont: #ced4da,
+	strongFont: #6e768e,
+
+	environmentIcon: #81d4fa,
+	environmentIconHover: #ffffff,
+);
+
+$gradients: (
+	first: linear-gradient(to bottom, #acb6e5, #74ebd5),
+	secondary: linear-gradient(to left, #ee9ca7, #ffdde1),
+	third: linear-gradient(to right, #00b09b, #96c93d),
+	fourth: linear-gradient(to left, #3494e6, #ec6ead),
+);

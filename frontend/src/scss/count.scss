@@ -1,0 +1,17 @@
+.count {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 20px 0;
+	font-size: 3rem;
+	.data-wrapper {
+		color: map-get($colors, strongFont);
+	}
+	.unit {
+		margin: 0 0 0 10px;
+		font-size: 2.5rem;
+		font-weight: 200;
+		color: map-get($colors, baseFont);
+	}
+}

@@ -1,0 +1,72 @@
+@mixin environment-item-circle-inner($background) {
+	width: 60%;
+	height: 60%;
+	border-radius: 100%;
+	background-color: $background;
+}
+
+.environment-item {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid map-get($colors, baseBorder);
+	&:last-of-type {
+		border-bottom: none;
+	}
+	.environment-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 10%;
+		height: 100%;
+		font-size: 1.4rem;
+		color: map-get($colors, environmentIcon);
+	}
+	.title {
+		display: flex;
+		align-items: center;
+		width: 30%;
+		height: 100%;
+		padding-left: 10px;
+		font-weight: 400;
+		color: map-get($colors, strongFont);
+	}
+	.data {
+		display: flex;
+		align-items: center;
+		width: 20%;
+		height: 100%;
+		font-weight: 600;
+		color: map-get($colors, strongFont);
+	}
+	.unit {
+		display: flex;
+		align-items: center;
+		width: 30%;
+		height: 100%;
+		font-weight: 600;
+		color: map-get($colors, baseFont);
+	}
+	.status {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 10%;
+		height: 100%;
+		.circle-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 30px;
+			height: 30px;
+			border-radius: 100%;
+			// background: #dddddd;
+			.inner-success {
+				@include environment-item-circle-inner(map-get($colors, primary));
+			}
+			.inner-danger {
+				@include environment-item-circle-inner(map-get($colors, danger));
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+@mixin card-avatar-title($background) {
+	padding: $cardTitlePadding;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	.avatar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		background: $background;
+		i {
+			font-size: 1.6rem;
+			color: map-get($colors, cardAvatarIcon);
+		}
+	}
+	.avatar-content {
+		text-align: center;
+	}
+	.avatar-right {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		color: map-get($colors, baseFont);
+		&:hover {
+			color: map-get($colors, strongFont);
+		}
+	}
+	.title {
+		margin: 10px 0 0 0;
+		font-size: 1.2rem;
+		color: map-get($colors, strongFont);
+	}
+	.sub-title {
+		margin: 10px 0 0 0;
+		font-size: 1.1rem;
+		color: map-get($colors, baseFont);
+	}
+}
+
+@mixin card-avatar-left {
+	flex-direction: row;
+	justify-content: flex-start;
+	.avatar {
+		width: 50px;
+		height: 50px;
+		font-size: 0.7rem !important;
+	}
+	.avatar-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		margin: 0 0 0 6px;
+		.title {
+			margin: 0;
+		}
+	}
+	.avatar-right {
+		position: relative;
+		margin-left: auto;
+		top: 0;
+		left: 0;
+	}
+}
+
+.card {
+	width: 100%;
+	background-color: map-get($colors, cardBackground);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	margin: 0 0 20px 0;
+	&:hover {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+	.card-title {
+		display: flex;
+		justify-content: space-between;
+		padding: $cardTitlePadding;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: map-get($colors, strongFont);
+		.more {
+			color: map-get($colors, baseFont);
+			cursor: pointer;
+			font-size: 1rem;
+			&:hover {
+				color: map-get($colors, strongFont);
+			}
+		}
+	}
+	.card-avatar-title-first-center {
+		@include card-avatar-title(map-get($gradients, first));
+	}
+	.card-avatar-title-secondary-center {
+		@include card-avatar-title(map-get($gradients, secondary));
+	}
+	.card-avatar-title-third-center {
+		@include card-avatar-title(map-get($gradients, third));
+	}
+	.card-avatar-title-fourth-center {
+		@include card-avatar-title(map-get($gradients, fourth));
+	}
+
+	.card-avatar-title-first-left {
+		@include card-avatar-title(map-get($gradients, first));
+		@include card-avatar-left;
+	}
+	.card-avatar-title-secondary-left {
+		@include card-avatar-title(map-get($gradients, secondary));
+		@include card-avatar-left;
+	}
+	.card-avatar-title-third-left {
+		@include card-avatar-title(map-get($gradients, third));
+		@include card-avatar-left;
+	}
+	.card-avatar-title-fourth-left {
+		@include card-avatar-title(map-get($gradients, fourth));
+		@include card-avatar-left;
+	}
+	.card-body {
+		padding: $cardBodyPadding;
+	}
+	.no-padding {
+		padding: 10px 0 0 0;
+	}
+}
