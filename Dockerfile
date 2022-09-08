@@ -1,5 +1,4 @@
 FROM        node:13.10-alpine
-LABEL       maintainer Do Young
 
 RUN         mkdir -p /usr/src/frontend
 RUN         mkdir -p /usr/src/backend
