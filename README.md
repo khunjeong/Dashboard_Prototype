@@ -1,5 +1,5 @@
 ## 21년도에 만든 데모용 대시보드
-
+http://54.158.245.159/
 ![캡쳐이미지](./frontend/src/assets/capture.PNG)
 
 ## 실행방법
