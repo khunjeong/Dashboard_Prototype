@@ -1,7 +1,7 @@
 <template>
   <div class="main-title">
     <span>Smart City</span>
-    <img src="/assets/suwon.png" alt="" />
+    <!-- <img src="/assets/suwon.png" alt="" /> -->
   </div>
 </template>
 
