@@ -16,11 +16,20 @@ const CONFIG = {
   stats: {
     maxModules: 0,
   },
+  devServer: {
+    overlay: false,
+  },
   module: {
     rules: [
+      // {
+      //   test: /\.js$/,
+      //   use: "babel-loader",
+      //   exclude: /node_modules/,
+      // },
       {
         test: /\.vue$/,
         loader: "vue-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.ts$/,
@@ -28,6 +37,7 @@ const CONFIG = {
         options: {
           appendTsSuffixTo: [/\.vue$/],
         },
+        exclude: /node_modules/,
       },
     ],
   },

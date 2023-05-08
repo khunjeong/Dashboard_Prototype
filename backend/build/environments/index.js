@@ -7,7 +7,7 @@ exports.env = void 0;
 var dotenv_1 = __importDefault(require("dotenv"));
 var path_1 = __importDefault(require("path"));
 dotenv_1.default.config({
-    path: path_1.default.join(__dirname, "./../../.env." + (process.env.NODE_ENV === "production" ? "prod" : "dev")),
+    path: path_1.default.join(__dirname, "./../../.env.".concat(process.env.NODE_ENV === "production" ? "prod" : "dev")),
 });
 var env;
 (function (env) {
@@ -19,7 +19,7 @@ var environments = {
     env: env[process.env.NODE_ENV] || env.development,
     PORT: process.env.PORT,
     DB_HOST: process.env.DB_HOST,
-    DB_PORT: parseInt("" + process.env.DB_PORT),
+    DB_PORT: parseInt("".concat(process.env.DB_PORT)),
     DB_USER: process.env.DB_USER,
     DB_PASSWORD: process.env.DB_PASSWORD,
     DB_DATABASE: process.env.DB_DATABASE,
